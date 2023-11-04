@@ -17,6 +17,11 @@ public class PlayerBehavior : MonoBehaviour
     public float verticalScreenLimit;
     public GameObject bulletPrefab;
 
+    private void Awake()
+    {
+        GameObject.FindWithTag("MainCamera").transform.position = new Vector3(0, 2.5f, -10);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
